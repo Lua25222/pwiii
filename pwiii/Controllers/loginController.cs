@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using pwiii.Models;
 
 namespace pwiii.Controllers
 {
     public class loginController : Controller
     {
-        public IActionResult Logar()
+        [HttpGet]
+        public IActionResult Logar(loginmodel dados)
         {
-            return View();
+            loginmodel model = new loginmodel();
+            return View(model);
         }
     }
 }
